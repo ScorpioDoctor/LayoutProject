@@ -55,7 +55,7 @@
               <span> 选项一 </span>
             </MenuItem>
             <MenuItem name="option2">
-              <Icon type="ios-app"></Icon>
+              <Icon type="ios-aperture-outline" />
               <span> 选项二 </span>
             </MenuItem>
             <MenuItem name="option3">
@@ -65,14 +65,7 @@
           </Menu>
         </Sider>
         <Content class="content" :class="{ 'content-expand' : isCollapsed }">
-            <Breadcrumb class="breadcrumb">
-              <BreadcrumbItem to="/">Home</BreadcrumbItem>
-              <BreadcrumbItem to="/app">Apps</BreadcrumbItem>
-              <BreadcrumbItem>IView</BreadcrumbItem>
-            </Breadcrumb>
-          <Card style="margin-top: 16px">
-            <slot></slot>
-          </Card>
+          <slot></slot>
         </Content>
       </Layout>
       <Drawer title="选择颜色" v-model="openTheme"></Drawer>
@@ -135,6 +128,7 @@
   }
 
   .content {
+    background-color: #f8f8f9;
     margin-top: 60px;
     margin-left: 240px;
     padding: 16px;
